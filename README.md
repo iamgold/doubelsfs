@@ -4,6 +4,9 @@ doubelsfs
 This This is a lightweight library of file system in PHP. It provides a simple interface to swift access file, so named  DoublesFS.
 
 # Install
+```
+composer require iamgold/doublesfs
+```
 
 # Support
 - Local disk storage
