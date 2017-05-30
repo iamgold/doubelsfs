@@ -12,7 +12,7 @@ use iamgold\doublesfs\StorageInterface;
  * This class is used to handle access file that in local storage.
  *
  * @author Eric Huang <iamgold0105@gmail.com>
- * @version 1.0.0
+ * @version 1.0.1
  */
 class LocalStorage extends AbstractStorage implements StorageInterface
 {
@@ -68,7 +68,7 @@ class LocalStorage extends AbstractStorage implements StorageInterface
             if (!is_string($contents))
                 throw new Exception("Invalid contents", 400);
 
-            $fp = fopen($dest, 'w+');
+            $fp = fopen($dest, 'w');
 
             if (!fwrite($fp, $contents))
                 throw new Exception("Written contents to $key failur", 500);
