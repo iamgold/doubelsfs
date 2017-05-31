@@ -109,10 +109,10 @@ class LocalStorage extends AbstractStorage implements StorageInterface
     public function delete($key)
     {
         try {
-            $filepath = $this->getRealPath($key);
-
-            if (!$this->exists($filepath))
+            if (!$this->exists($key))
                 return true;
+
+            $filepath = $this->getRealPath($key);
 
             return unlink($filepath);
         } catch (Exception $e) {
